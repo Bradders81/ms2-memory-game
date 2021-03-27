@@ -11,11 +11,15 @@ document.addEventListener('DOMContentLoaded', () => {
      buttonArray.push(buttons);
 }
 
-function gamesTurn() {
-    let gamesChoice = buttonArray(Math.floor(Math.random() * buttonArray.length))
+console.log(buttonArray)
 
-    console.log(gamesChoice)
-}
+
+    let gamesChoice = buttonArray[Math.floor(Math.random() * buttonArray.length)];
+        
+ 
+   
+
+
 
 
 
