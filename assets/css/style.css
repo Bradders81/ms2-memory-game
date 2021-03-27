@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle&display=swap');
+
+/*---------- Global Styles ----------*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    width: auto;
+    height: 100vh;
+    background-color: rgb(236, 222, 222);
+}
+
+/*---------- Header ----------*/
+h1 {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/*----------Game Buttons----------*/
+.game-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.gameButton {
+    height: 200px;
+    width: 200px;
+    padding:10px;
+    margin: 20px;
+    border: 2px solid #000;
+    border-radius: 8px;
+
+}
+
+#btn-green {
+    background-color: rgb(19, 226, 36);
+}
+#btn-blue {
+    background-color: rgb(13, 13, 228);
+}
+#btn-purple {
+    background-color: rgb(185, 22, 185);
+}
+#btn-red {
+    background-color: rgb(223, 18, 18);
+}
+
+.control-buttons {
+padding:10px;
+border: solid 2px #000;
+border-radius: 8px;
+}
+/*---------- Score Counters ----------*/
+.counters {
+    justify-content: center;
+    display: flex;
+    padding: 10px;
+    
+   
+
+}
+
+
+
