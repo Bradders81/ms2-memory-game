@@ -36,24 +36,23 @@ h1 {
     width: 150px;
     padding:10px;
     margin: 10px;
-    /* border: px solid #000; */
-    border-radius: 8px;
-   
-
+    border: 4px solid rgb(170, 167, 167);
+    border-radius: 50% 50%;
+    box-shadow: #000 6px 4px 4px;
+    outline: none;
 }
-  
+.gameButtons:focus {
+    outline: none;
+}
+
+
 #btn-green {
     background-color: rgb(19, 226, 36);
-     /* box-shadow: rgb(11, 136, 22) 4px 4px 4px 5px; */
 }
-/* #btn-green:hover {
-    background-color: rgb(24, 151, 35);
-    
-} */
-
 #btn-blue {
     background-color: rgb(13, 13, 228);
 }
+
 #btn-purple {
     background-color: rgb(185, 22, 185);
 }
