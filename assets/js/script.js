@@ -14,27 +14,35 @@ document.addEventListener('DOMContentLoaded', () => {
         buttonArray.push(buttons);
     }
 
-roundCounter()
+
 
 
     //Plays sound when game buttons pressed/selected
     function sound(pressed) {
         if (pressed == 'btn-green') {
-            beep1 = new Audio('assets/sounds/beep1.wav')
+            beep1 = new Audio('assets/sounds/beep1.wav');
             beep1.play()
         } else if (pressed == 'btn-blue') {
-            beep2 = new Audio('assets/sounds/beep2.mp3')
+            beep2 = new Audio('assets/sounds/beep2.mp3');
             beep2.play()
         } else if (pressed == 'btn-purple') {
-            beep3 = new Audio('assets/sounds/beep3.wav')
+            beep3 = new Audio('assets/sounds/beep3.wav');
             beep3.play()
         } else if (pressed == 'btn-red'); {
-            beep4 = new Audio('assets/sounds/beep4.wav')
+            beep4 = new Audio('assets/sounds/beep4.wav');
             beep4.play()
         }
     }
 
-     function startGame() {
+    function roundCounter(num) {
+        let roundDiv = document.getElementById('roundCounter');
+        let roundSpan = document.createElement('span');
+        roundSpan.id = 'round';
+        roundSpan.innerHTML= (num)
+        roundDiv.appendChild(roundSpan)
+    }
+
+    function startGame() {
         userPattern = [];
         gamePattern = [];
         //PLACEHOLDER: play start game sound
@@ -50,9 +58,7 @@ roundCounter()
 
     // function displayGamesPattern()
 
-
     //Checks what the user clicked and updates userPattern array.  Also makes button clicked flash to user.
-    // function tester() {
     for (buttonsClicked of gameBtn) {
         buttonsClicked.addEventListener("click", function () {
             userPattern.push(buttonsClicked)
@@ -74,16 +80,18 @@ roundCounter()
                 }
                 else if (clickedBtnID === 'btn-red') {
                     changeBack = document.getElementById("btn-red")
-                    changeBack.style.backgroundColor = 'rgb(223, 18, 18)'; //purple
+                    changeBack.style.backgroundColor = 'rgb(223, 18, 18)'; //red
                 }
-                else alert('sorry something went wrong')
+                else alert('Sorry something went wrong')
+               
             }, 300)
+             roundCounter(1)
 
         });
     }
-    // }
 
 
+ 
 
 
 
