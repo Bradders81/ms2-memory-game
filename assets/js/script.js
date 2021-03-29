@@ -49,46 +49,46 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1000);
     });
 
-
-
-    //updates the gamePattern array
+    //updates the gamePattern array each round when it is the games turn
     function gamesTurn() {
-        let gamesChoice = buttonArray[Math.floor(Math.random() * buttonArray.length)]; //Credit: this line taken from https://www.kirupa.com/html5/picking_random_item_from_array.htm
+        let gamesChoice = buttonArray[Math.floor(Math.random() * buttonArray.length)]; //this method was learned from  https://www.kirupa.com/html5/picking_random_item_from_array.htm
         gamePattern.push(gamesChoice);
-        sound(gamesChoice);
-        let randomBtn = document.getElementById(gamesChoice)
-        randomBtn.style.backgroundColor = 'rgb(250, 250, 250)' //Shade of white
-        randomBtn.style.boxShadow = 'none';
-        setTimeout(function () {
-            if (randomBtn.id === 'btn-green') {
-                // changeBack = document.getElementById("btn-green")
-                randomBtn.style.backgroundColor = 'rgb(19, 226, 36)'; //green
-                randomBtn.style.boxShadow = '#000 6px 4px 4px';
-            }
-            else if (randomBtn.id === 'btn-blue') {
-                // randomBtn= document.getElementById("btn-blue")
-                randomBtn.style.backgroundColor = 'rgb(13, 13, 228)'; //blue
-                randomBtn.style.boxShadow = '#000 6px 4px 4px';
-            }
-            else if (randomBtn.id === 'btn-purple') {
-                // changeBack = document.getElementById("btn-purple")
-                randomBtn.style.backgroundColor = 'rgb(185, 22, 185)'; //purple
-                randomBtn.style.boxShadow = '#000 6px 4px 4px';
-            }
-            else if (randomBtn.id === 'btn-red') {
-                // changeBack = document.getElementById("btn-red")
-                randomBtn.style.backgroundColor = 'rgb(223, 18, 18)'; //red
-                randomBtn.style.boxShadow = '#000 6px 4px 4px';
-            }
-            else alert('Sorry something went wrong')
-
-        }, 300)
-
-       
-
+        displayGamesPattern();
     }
 
-    // function displayGamesPattern()
+//Displays the content of the gamePattern array each round to the user to simulate the games turn at pressing the game buttons
+    function displayGamesPattern() {
+        for (displayPattern of gamePattern) {
+            let = btnSound = displayPattern
+            sound(btnSound);
+            let BtnShow = document.getElementById(btnSound)
+            BtnShow.style.backgroundColor = 'rgb(250, 250, 250)' //Shade of white
+            BtnShow.style.boxShadow = 'none';
+            setTimeout(function () {
+                if (BtnShow.id === 'btn-green') {
+                    // changeBack = document.getElementById("btn-green")
+                    BtnShow.style.backgroundColor = 'rgb(19, 226, 36)'; //green
+                    BtnShow.style.boxShadow = '#000 6px 4px 4px';
+                }
+                else if (BtnShow.id === 'btn-blue') {
+                    // BtnShow= document.getElementById("btn-blue")
+                    BtnShow.style.backgroundColor = 'rgb(13, 13, 228)'; //blue
+                    BtnShow.style.boxShadow = '#000 6px 4px 4px';
+                }
+                else if (BtnShow.id === 'btn-purple') {
+                    // changeBack = document.getElementById("btn-purple")
+                    BtnShow.style.backgroundColor = 'rgb(185, 22, 185)'; //purple
+                    BtnShow.style.boxShadow = '#000 6px 4px 4px';
+                }
+                else if (BtnShow.id === 'btn-red') {
+                    // changeBack = document.getElementById("btn-red")
+                    BtnShow.style.backgroundColor = 'rgb(223, 18, 18)'; //red
+                    BtnShow.style.boxShadow = '#000 6px 4px 4px';
+                }
+                else alert('Sorry something went wrong')
+            }, 300)
+        }
+    }
 
     //Checks what the user clicked and updates userPattern array.  Also makes button clicked flash to user.
     for (buttonsClicked of gameBtn) {
@@ -120,14 +120,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     changeBack.style.boxShadow = '#000 6px 4px 4px';
                 }
                 else alert('Sorry something went wrong')
-
             }, 300)
-            console.log(userPattern)
-
         });
     }
 
-
+   
 });
 
 
