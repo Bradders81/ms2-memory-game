@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-
     let startBtn = document.getElementById('start');
     let reset = document.getElementById('reset')
-
 
     let userPattern = []; //Array to store the of selections by the gamesTurn function
     let gamePattern = []; //Array to sore the selections by the usersTurn function
@@ -33,11 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-
-
-
-
-    //Credit: Influence for this function came from: Code Institute Love Math Project: https://github.com/Code-Institute-Solutions/JS-Essentials-Project/blob/master/11-The%20Multiplication%20game/script.js
+    //Credit: Influence for this function came from: Code Institute Love Math Project walk-through.
     function countToRoundCounter() {
         let roundNum = gamePattern.length;
         document.getElementById("round").innerHTML = roundNum;
@@ -88,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     else alert('Sorry something went wrong');
                 }, 500);
-            }, i * 1000);
+            }, i * 600);
         }
     }
 
@@ -128,13 +122,14 @@ document.addEventListener('DOMContentLoaded', () => {
             checkMatch(clickIndex)
         });
     }
-
+    //Checks the User's is submitting the correct pattern.
     function checkMatch(clickIndex) {
         if (userPattern[clickIndex] === gamePattern[clickIndex]) {
             if (userPattern.length === gamePattern.length) {
                 userPattern = []
                 setTimeout(function () {
                     gamesTurn()
+                    score()
                 }, 1500);
             } else {
                 return
@@ -143,14 +138,31 @@ document.addEventListener('DOMContentLoaded', () => {
             alert(' That was not correct - GAME OVER!')
         }
     }
-
-    reset.addEventListener('click', function() {
+    //Resets the game for the user
+    reset.addEventListener('click', function () {
         userPattern = []
         gamePattern = []
-        document.getElementById("round").innerHTML = " ";
+        document.getElementById("round").innerHTML = "0";
+        document.getElementById("score").innerHTML = "0";
+        document.getElementById('hscore').innerHTML ="0"
         // document.getElementById('score').innerHTML = ""
     })
 
+    function flashAll() {
+
+    }
+function score() {
+document.getElementById('hscore').innerHTML = gamePattern.length *10;
+
+}
+
+    function EndOfGame() {
+
+    }
+
+    function highScore() {
+
+    }
 
 });
 
