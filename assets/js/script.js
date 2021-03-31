@@ -2,14 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     let startBtn = document.getElementById('start');
-    var roundCounter = 1;
+    let reset = document.getElementById('reset')
 
-    let reset;
+
     let userPattern = []; //Array to store the of selections by the gamesTurn function
     let gamePattern = []; //Array to sore the selections by the usersTurn function
     const buttonArray = []; //Array to hold games buttons for the game to choose from randomly
 
-    //gets the game button id and pushes them into the buttonArray
+    //gets all id of all the game button id and pushes them into the buttonArray
     let gameBtn = document.getElementsByClassName('gameButtons');
     for (buttons of gameBtn) {
         let gameBtnID = buttons.id
@@ -33,11 +33,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+
+
+
+
     //Credit: Influence for this function came from: Code Institute Love Math Project: https://github.com/Code-Institute-Solutions/JS-Essentials-Project/blob/master/11-The%20Multiplication%20game/script.js
     function countToRoundCounter() {
         let roundNum = gamePattern.length;
         document.getElementById("round").innerHTML = roundNum;
-
     }
 
     startBtn.addEventListener('click', function () {
@@ -80,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         BtnShow.style.boxShadow = '#000 6px 4px 4px';
                     }
                     else if (BtnShow.id === 'btn-red') {
-                        // changeBack = document.getElementById("btn-red")
                         BtnShow.style.backgroundColor = 'rgb(223, 18, 18)'; //red
                         BtnShow.style.boxShadow = '#000 6px 4px 4px';
                     }
@@ -88,7 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, 500);
             }, i * 1000);
         }
-
     }
 
     //USERS TURN 
@@ -140,11 +141,17 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         } else if (userPattern[clickIndex] !== gamePattern[clickIndex]) {
             alert(' That was not correct - GAME OVER!')
-
         }
     }
 
-});
+    reset.addEventListener('click', function() {
+        userPattern = []
+        gamePattern = []
+        document.getElementById("round").innerHTML = " ";
+        // document.getElementById('score').innerHTML = ""
+    })
 
+
+});
 
 
