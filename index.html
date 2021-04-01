@@ -16,13 +16,14 @@
 
     <header>
         <h1>Memorious</h1>
+        
     </header>
-
+    
     <div class="container">
         <div class="row no-gutters">
-            <div class="col-4 counters">Score: <span id="score"></span></div>
-            <div class="col-4 counters" id="roundCounter">Round: <span id="round">0</span></div>
-            <div class=" col-4 counters">High Score: <span id="hscore"></span> </div>
+            <div class="col-4 counters">Score: <span id="score"> 0</span></div>
+            <div class="col-4 counters" id="roundCounter">Round: <span id="round"> 0</span></div>
+            <div class=" col-4 counters">High Score: <span id="hScore"> 0</span> </div>
         </div>
     </div>
     <div class="container">
@@ -31,6 +32,11 @@
                 <div class="game-button-container">
                     <button class="gameButtons" id="btn-green" data-id="0"></button>
                     <button class="gameButtons" id="btn-blue" data-id="1"></button>
+                </div>
+                <div class="col-12">
+                    <div>
+                        <p id="instructions"></p>
+                    </div>
                 </div>
             </div>
             <div class="col-12">
@@ -56,6 +62,11 @@
             </div>
         </div>
     </div>
+    <footer id="footer">
+        <p>
+            For Education Purposes Only
+        </p>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>

@@ -1,7 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-    $('.gameButtons').attr("disabled", true)
+    turnOff()
+    getReady()
+    highScore = 0;
     let startBtn = document.getElementById('start');
     let reset = document.getElementById('reset')
+
 
     let userPattern = []; // Array to store the of selections by the gamesTurn function
     let gamePattern = []; // Array to sore the selections by the usersTurn function
@@ -40,7 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
     startBtn.addEventListener('click', function () {
         userPattern = [];
         gamePattern = [];
-        // PLACEHOLDER: play start game sound
+        document.getElementById('score').innerHTML = " "
+        waitInstruction()
         setTimeout(function () {
             gamesTurn()
         }, 1000);
@@ -50,8 +54,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function gamesTurn() {
         let gamesChoice = buttonArray[Math.floor(Math.random() * buttonArray.length)]; // Credit: method on this line learned from: https://www.kirupa.com/html5/picking_random_item_from_array.htm
         gamePattern.push(gamesChoice);
+        waitInstruction()
         countToRoundCounter();
-        displayGamesPattern();
+        setTimeout(function () {
+            displayGamesPattern()
+        }, 200)
 
     }
 
@@ -84,15 +91,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     else alert('Sorry something went wrong');
                 }, 500);
+
             }, i * 600);
-        setTimeout(function () {// Credit: from tutor 
-            turnOn();
-        }, gamePattern.length * 600);
+            setTimeout(function () {
+                turnOn();
+                yourTurnInstruction()
+            }, gamePattern.length * 600);
+
         }
     }
-    // if (i == gamePattern.length - 1) {
-    //             $('.gameButtons').attr("disabled", false); // enables button clicks
-
 
     // USERS TURN 
     // Checks what the user clicked and updates userPattern array.  Also makes button clicked flash to user.
@@ -138,14 +145,16 @@ document.addEventListener('DOMContentLoaded', () => {
             if (userPattern.length === gamePattern.length) {
                 userPattern = []
                 setTimeout(function () {
+                    waitInstruction()
+                }, 400)
+                setTimeout(function () {
                     gamesTurn()
                     score()
-                }, 1500);
+                }, 800);
             } else {
             }
         } else if (userPattern[clickIndex] !== gamePattern[clickIndex]) {
-
-            alert(' That was not correct - GAME OVER!')
+            gameOver()
         }
     }
 
@@ -159,20 +168,24 @@ document.addEventListener('DOMContentLoaded', () => {
         // document.getElementById('score').innerHTML = ""
     })
 
-    function flashAll() {
 
-    }
     function score() {
         document.getElementById('score').innerHTML = gamePattern.length * 10;
-
     }
 
     function EndOfGame() {
+        let conclusion = getElementById('conclusion')
 
     }
 
     function highScore() {
-
+        let highScore = document.getElementById('hScore')
+        let score = document.getElementById('score')
+        if (score > highScore) {
+            highScore.innerHTML = score;
+        } else {
+            return
+        }
     }
 
     function turnOn() {
@@ -182,11 +195,35 @@ document.addEventListener('DOMContentLoaded', () => {
     function turnOff() {
         $('.gameButtons').attr("disabled", true);
     }
+    // Creates paragraph to tell user to wait for their turn
+    function waitInstruction() {
+        let instructions = document.getElementById('instructions');
+        instructions.innerText = "WAIT!"
+        instructions.style.color = 'rgb(220,53,69)'
+    }
 
+    // Tells the user when it is their turn
+    function yourTurnInstruction() {
+        let = instructions = document.getElementById('instructions');
+        instructions.innerText = "YOUR TURN!"
+        instructions.style.color = 'rgb(65, 236, 49)'
+    }
 
-    // function blockClick () {
-    //     $('.gameButtons').attr("disabled", false); 
-    // }
+    // Opening Text - tells the press start
+    function getReady() {
+        let instructions = document.getElementById('instructions');
+        instructions.innerText = "PRESS START!"
+        instructions.style.color = 'rgb(265, 796, 0)'
+    }
+    function gameOver() {
+        let score = document.getElementById('score');
+        let scoreNum = score.innerHTML;
+        let gameOver = document.getElementById('instructions');
+        gameOver.innerText = `GAME OVER! Score: ${scoreNum}`
+        instructions.style.color = 'rgb(185, 22, 185)'
+        highScore()
+    }
+
 
 });
 

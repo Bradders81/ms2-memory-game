@@ -46,6 +46,7 @@ h1 {
    
     
 }
+ 
 
 .gameButtons:focus {
     outline: none;
@@ -64,6 +65,7 @@ h1 {
 }
 #btn-red {
     background-color: rgb(223, 18, 18);
+  
 }
 
 .control-buttons {
@@ -77,15 +79,13 @@ border-radius: 8px;
     justify-content: center;
     display: flex;
     padding: 10px;
-    
-   
+    }
 
+#instructions {
+    font-size: 50px;
+    font-weight: 800;
+    justify-content: center;
+    display: flex;
+    font-style: oblique;
 }
 
-/* .stopClicks {
-    pointer-events: none;
-}
-
-.allowClicks {
-   pointer-events: ;
-} */
