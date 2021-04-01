@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let gameBtnID = buttons.id
         buttonArray.push(gameBtnID);
     }
- 
+
     // Plays sound when game buttons pressed/selected
     function sound(pressed) {
         if (pressed == 'btn-green') {
@@ -40,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
     startBtn.addEventListener('click', function () {
         userPattern = [];
         gamePattern = [];
-
         // PLACEHOLDER: play start game sound
         setTimeout(function () {
             gamesTurn()
@@ -49,14 +48,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Updates the gamePattern array each round when it is the games turn
     function gamesTurn() {
-        let gamesChoice = buttonArray[Math.floor(Math.random() * buttonArray.length)]; // Credit: method on this line learned from:  https://www.kirupa.com/html5/picking_random_item_from_array.htm
+        let gamesChoice = buttonArray[Math.floor(Math.random() * buttonArray.length)]; // Credit: method on this line learned from: https://www.kirupa.com/html5/picking_random_item_from_array.htm
         gamePattern.push(gamesChoice);
-        countToRoundCounter()
-        displayGamesPattern()
+        countToRoundCounter();
+        displayGamesPattern();
+
     }
 
     // Displays the content of the gamePattern array each round to the user to simulate the games turn at pressing the game buttons
     function displayGamesPattern() {
+        $('.gameButtons').attr("disabled", true)
         for (let i = 0; i < gamePattern.length; i++) {
             setTimeout(function () {
                 btnSound = gamePattern[i];
@@ -83,12 +84,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     else alert('Sorry something went wrong');
                 }, 500);
-                if (i == gamePattern.length - 1) {
-                    $('.gameButtons').attr("disabled", false); // enables button clicks
-                }
-                }, i * 600);
+            }, i * 600);
+        setTimeout(function () {// Credit: from tutor 
+            turnOn();
+        }, gamePattern.length * 600);
         }
     }
+    // if (i == gamePattern.length - 1) {
+    //             $('.gameButtons').attr("disabled", false); // enables button clicks
+
 
     // USERS TURN 
     // Checks what the user clicked and updates userPattern array.  Also makes button clicked flash to user.
@@ -171,14 +175,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    // function turnOn() {
-    //     $('.gameButtons').attr("disabled", false);
-    // }
+    function turnOn() {
+        $('.gameButtons').attr("disabled", false);
+    }
 
-    // function turnOff() {
-    //     $('.gameButtons').attr("disabled", true);
-    // }
+    function turnOff() {
+        $('.gameButtons').attr("disabled", true);
+    }
 
+
+    // function blockClick () {
+    //     $('.gameButtons').attr("disabled", false); 
+    // }
 
 });
+
 
