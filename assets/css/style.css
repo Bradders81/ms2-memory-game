@@ -8,12 +8,20 @@
 
 }
 
+html, body {
+    height: 100vh;
+}
+
 body {
     width: 100vw;
     height: 100vh;
     background: url("../images/bg1.jpg") center center no-repeat;
-    display: cover;
+    display: flex;
+    flex-direction: column;
+}
 
+.content {
+    flex: 1 0 auto;
 }
 
 /*---------- Header ----------*/
@@ -89,3 +97,17 @@ border-radius: 8px;
     font-style: oblique;
 }
 
+#footer {
+height: 50px;
+width: auto;
+background-color: rgb(224, 62, 3);
+flex-shrink:0;
+}
+
+#footer p {
+    font-size: 20px;
+    color: #fff;
+    margin-top: 5px;
+    margin-left: 25px
+    
+}

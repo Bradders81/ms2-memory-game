@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function highScore() {
         let highScore = document.getElementById('hScore')
         let score = document.getElementById('score')
-        if (score > highScore) {
+        if (score > highScore+1) {
             highScore.innerHTML = score;
         } else {
             return
