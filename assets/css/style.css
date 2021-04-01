@@ -11,9 +11,9 @@
 body {
     width: 100vw;
     height: 100vh;
-   
-    background-color: rgb(236, 222, 222);
-  
+    background: url("../images/bg1.jpg") center center no-repeat;
+    display: cover;
+
 }
 
 /*---------- Header ----------*/
@@ -42,6 +42,8 @@ h1 {
     border-radius: 50% 50%;
     box-shadow: #000 6px 4px 4px;
     outline: none;
+    
+   
     
 }
 
@@ -80,6 +82,10 @@ border-radius: 8px;
 
 }
 
+/* .stopClicks {
+    pointer-events: none;
+}
 
-
-
+.allowClicks {
+   pointer-events: ;
+} */

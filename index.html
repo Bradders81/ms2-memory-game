@@ -18,41 +18,35 @@
         <h1>Memorious</h1>
     </header>
 
-    <div class="container-fluid">
+    <div class="container">
         <div class="row no-gutters">
-            <div class="col-4">
-                <div class="counters">Score: <span id="score">0</span></div>
+            <div class="col-4 counters">Score: <span id="score"></span></div>
+            <div class="col-4 counters" id="roundCounter">Round: <span id="round">0</span></div>
+            <div class=" col-4 counters">High Score: <span id="hscore"></span> </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row no-gutters" id="press">
+            <div class="col-12">
+                <div class="game-button-container">
+                    <button class="gameButtons" id="btn-green" data-id="0"></button>
+                    <button class="gameButtons" id="btn-blue" data-id="1"></button>
+                </div>
             </div>
-            <div class="col-4">
-                <div id="roundCounter">Round: <span id="round">0</span></div>
+            <div class="col-12">
+                <div class="game-button-container">
+                    <button class="gameButtons" id="btn-purple" data-id="2"></button>
+                    <button class="gameButtons" id="btn-red" data-id="3"></button>
+                </div>
             </div>
+        </div>
+    </div>
 
-            <div class="col-4">
-                <div class="counters">High Score: <span id="hscore">0</span> </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid">
-        <div class="row no-gutters">
-            <div class="col-12">
-                <div class="game-button-container">
-                    <button  class="gameButtons gameButtonPointer" id="btn-green" data-id="0"></button>
-                    <button  class="gameButtons gameButtonPointer" id="btn-blue"  data-id="1"></button>
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="game-button-container">
-                    <button  class="gameButtons gameButtonPointer" id="btn-purple" data-id="2"></button>
-                    <button  class="gameButtons gameButtonPointer" id="btn-red" data-id="3"></button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row no-gutters">
             <div class="col-6">
                 <div class="game-button-container">
-                    <button id="start" class=" btn btn-success control-buttons" >Start</button>
+                    <button id="start" class=" btn btn-success control-buttons">Start</button>
                 </div>
             </div>
             <div class="col-6">
