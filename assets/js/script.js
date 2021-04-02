@@ -1,7 +1,4 @@
 
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
     turnOff()
     getReady()
@@ -45,18 +42,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     startBtn.addEventListener('click', function () {
+        $(this).attr("disabled", true)
         userPattern = [];
         gamePattern = [];
         document.getElementById('score').innerHTML = " "
         waitInstruction()
         setTimeout(function () {
-            gamesTurn()
+        gamesTurn()
         }, 1000);
     });
 
     // Updates the gamePattern array each round when it is the games turn
     function gamesTurn() {
-        let gamesChoice = buttonArray[Math.floor(Math.random() * buttonArray.length)]; // Credit: method on this line learned from: https://www.kirupa.com/html5/picking_random_item_from_array.htm
+        let gamesChoice = buttonArray[Math.floor(Math.random() * buttonArray.length)]; // Credit: this line learned from: https://www.kirupa.com/html5/picking_random_item_from_array.htm
         gamePattern.push(gamesChoice);
         waitInstruction()
         countToRoundCounter();
@@ -164,6 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //Resets the game for the user
     reset.addEventListener('click', function () {
+         $(startBtn).attr("disabled", false)
         userPattern = []
         gamePattern = []
         document.getElementById("round").innerHTML = "0";
@@ -177,12 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('score').innerHTML = gamePattern.length * 10;
     }
 
-    function EndOfGame() {
-        let conclusion = getElementById('conclusion')
-
-    }
-
-    function highScore() {
+       function highScore() {
         let highScore = document.getElementById('hScore')
         let score = document.getElementById('score')
         if (score > highScore+1) {
