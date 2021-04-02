@@ -23,9 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Plays sound when game buttons pressed/selected
     function sound(pressed) {
-        if ($window.width() < 500) {
-            return
-        } else if (pressed == 'btn-green') {
+         if (pressed == 'btn-green') {
             beep1 = new Audio('assets/sounds/beep1.mp3');
             beep1.play()
         } else if (pressed == 'btn-blue') {
