@@ -111,3 +111,26 @@ flex-shrink:0;
     
 }
 
+@media screen and (max-width: 490px) {
+
+.gameButtons {
+    width: 125px;
+    height: 125px;
+}
+#instructions {
+    font-size: 30px;
+}
+
+
+}
+
+@media screen and (max-width: 330px) {
+
+.gameButtons {
+
+    width: 95px;
+    height:95px;
+
+}
+
+}
