@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let startBtn = document.getElementById('start');
     let reset = document.getElementById('reset')
 
+    let sound1 = new Audio('assets/sounds/beep1.wav').preload
+
+
 
     let userPattern = []; // Array to store the of selections by the gamesTurn function
     let gamePattern = []; // Array to sore the selections by the usersTurn function
@@ -21,16 +24,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Plays sound when game buttons pressed/selected
     function sound(pressed) {
         if (pressed == 'btn-green') {
-            beep1 = new Audio('assets/sounds/beep1.wav');
+            beep1 = new Audio('assets/sounds/beep1.mp3');
             beep1.play()
         } else if (pressed == 'btn-blue') {
             beep2 = new Audio('assets/sounds/beep2.mp3');
             beep2.play()
         } else if (pressed == 'btn-purple') {
-            beep3 = new Audio('assets/sounds/beep3.wav');
+            beep3 = new Audio('assets/sounds/beep3.mp3');
             beep3.play()
         } else if (pressed == 'btn-red'); {
-            beep4 = new Audio('assets/sounds/beep4.wav');
+            beep4 = new Audio('assets/sounds/beep4.mp3');
             beep4.play()
         }
     }
@@ -163,6 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //Resets the game for the user
     reset.addEventListener('click', function () {
          $(startBtn).attr("disabled", false)
+         getReady()
         userPattern = []
         gamePattern = []
         document.getElementById("round").innerHTML = "0";
@@ -178,8 +182,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
        function highScore() {
         let highScore = document.getElementById('hScore')
-        let score = document.getElementById('score')
-        if (score > highScore+1) {
+        let score = parseInt(document.getElementById('score'))
+        if (score > highScore) {
             highScore.innerHTML = score;
         } else {
             return
@@ -214,12 +218,14 @@ document.addEventListener('DOMContentLoaded', () => {
         instructions.style.color = 'rgb(265, 796, 0)'
     }
     function gameOver() {
+         turnOff()
         let score = document.getElementById('score');
         let scoreNum = score.innerHTML;
         let gameOver = document.getElementById('instructions');
         gameOver.innerText = `GAME OVER! Score: ${scoreNum}`
         instructions.style.color = 'rgb(185, 22, 185)'
         highScore()
+        turnOff()
     }
 
 
