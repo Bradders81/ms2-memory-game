@@ -184,10 +184,12 @@ document.addEventListener("DOMContentLoaded", () => {
   function gameOver() {
     turnOff();
     highScore();
+    setTimeout(function() {
     let score = document.getElementById("score").innerText;
     let gameOver = document.getElementById("instructions");
     gameOver.innerText = `GAME OVER! Score: ${score}`;
     instructions.style.color = "rgb(185, 22, 185)";
+  }, 200)
   }
 
   // Influence for this function came from: Code Institute Love Math Project walk-through.
@@ -203,13 +205,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function highScore() {
-    let highScore1 = parseInt(document.getElementById("hScore").innerText);
-    let score1 = parseInt(document.getElementById("score").innerText);
-      if (score1 > highScore1) {
-      document.getElementById("hScore").innerText = ;
+    let highScore = parseInt(document.getElementById("hScore").innerText);
+    let score = parseInt(document.getElementById("score").innerText);
+      if (score > highScore) {
+      document.getElementById("hScore").innerText = score;
     } else {
       return;
     }
   }
-  highScore() 
+
 });
