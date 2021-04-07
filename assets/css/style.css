@@ -1,143 +1,139 @@
-@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Roboto:wght@900:400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Roboto:wght@900:400&display=swap");
 
 /*---------- Global Styles ----------*/
-
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
- font-family: 'Roboto', sans-serif;
- font-weight: 900;
- letter-spacing: 2px;;
-
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  letter-spacing: 2px;
 }
 
-html, body {
-    height: 100vh;
+html,
+body {
+  height: 100vh;
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
-    background: url("../images/bg1.jpg") center center no-repeat;
-    display: flex;
-    flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background: url("../images/bg1.jpg") center center no-repeat;
+  display: flex;
+  flex-direction: column;
 }
 
 .content {
-    flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 /*---------- Header ----------*/
 h1 {
-    text-align: center;
-    margin-top: 25px;
-    margin-bottom: 15px;
-    margin-left: 10px;
-    margin-right: 10px;
-   font-family: 'Dela Gothic One', cursive;
-   font-style: oblique;
-   font-weight: 900;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-family: "Dela Gothic One", cursive;
+  font-style: oblique;
+  font-weight: 900;
 }
 
 /*----------Game Buttons----------*/
 .game-button-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .gameButtons {
-    height: 200px;
-    width: 200px;
-    padding: 10px;
-    margin: 10px;
-    border: 4px solid rgb(170, 167, 167);
-    border-radius: 50% 50%;
-    box-shadow: #000 6px 4px 4px;
-    outline: none;
+  height: 200px;
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+  border: 4px solid rgb(170, 167, 167);
+  border-radius: 50% 50%;
+  box-shadow: #000 6px 4px 4px;
+  outline: none;
 }
- 
 
 .gameButtons:focus {
-    outline: none;
+  outline: none;
 }
 
 #btn-green {
-    background-color: rgb(19, 226, 36);
+  background-color: rgb(19, 226, 36);
 }
 #btn-blue {
-    background-color: rgb(13, 13, 228);
+  background-color: rgb(13, 13, 228);
 }
 
 #btn-purple {
-    background-color: rgb(185, 22, 185);
+  background-color: rgb(185, 22, 185);
 }
 #btn-red {
-    background-color: rgb(223, 18, 18);
-  
+  background-color: rgb(223, 18, 18);
 }
 
 .control-buttons {
-padding:10px;
-border: solid 2px #000;
-border-radius: 8px;
-font-weight: 100;
+  padding: 10px;
+  border: solid 2px #000;
+  border-radius: 8px;
+  font-weight: 100;
 }
-
-
 
 /*---------- Score Counters ----------*/
 .counters {
-    justify-content: center;
-    display: flex;
-    padding: 10px;
-    font-size: 25px;
-    font-style: oblique;
+  justify-content: center;
+  display: flex;
+  padding: 10px;
+  font-size: 25px;
+  font-style: oblique;
 }
 
 #instructions {
-    font-size: 50px;
-    font-weight: 800;
-    justify-content: center;
-    display: flex;
-    font-style: oblique;
+  font-size: 50px;
+  font-weight: 800;
+  justify-content: center;
+  display: flex;
+  font-style: oblique;
 }
 
 #footer {
-height: 50px;
-width: auto;
-background-color: rgb(224, 62, 3);
-flex-shrink:0;
+  height: 50px;
+  width: auto;
+  background-color: rgb(224, 62, 3);
+  flex-shrink: 0;
 }
 
 #footer p {
-    font-size: 20px;
-    color: #fff;
-    margin-top: 5px;
-    margin-left: 25px
-    
+  font-size: 20px;
+  color: #fff;
+  margin-top: 5px;
+  margin-left: 25px;
 }
 
 /*---------- @Media Queries ----------*/
 @media screen and (max-width: 490px) {
-
-.gameButtons {
+  .gameButtons {
     width: 125px;
     height: 125px;
-}
+  }
 
-#instructions {
+  #instructions {
     font-size: 30px;
-}
+  }
+  .counters {
+    font-size: 12px;
+  }
 
+  #footer p {
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width: 330px) {
-
-.gameButtons {
+  .gameButtons {
     width: 95px;
-    height:95px;
-
-}
-
+    height: 95px;
+  }
 }

@@ -1,78 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="Description" content="Enter your description here" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Title</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="content">
-        <header>
-            <h1>Memorious</h1>
+      <header>
+        <h1>Memorious</h1>
+      </header>
 
-        </header>
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-sm-6 col-md-4 counters">
+            Score: <span id="score"> 0</span>
+          </div>
+          <div class="col-sm-6 col-md-4 counters" id="roundCounter">
+            Round: <span id="round"> 0</span>
+          </div>
+          <div class="col-sm-12 col-md-4 counters">
+            High Score: <span id="hScore"> 0</span>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row no-gutters" id="press">
+          <div class="col-12">
+            <div class="game-button-container">
+              <button class="gameButtons" id="btn-green"></button>
+              <button class="gameButtons" id="btn-blue"></button>
+            </div>
+            <div class="col-12">
+              <div>
+                <p id="instructions"></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="game-button-container">
+              <button class="gameButtons" id="btn-purple"></button>
+              <button class="gameButtons" id="btn-red"></button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <div class="container">
-            <div class="row no-gutters">
-                <div class="col-4 counters">Score: <span id="score"> 0</span></div>
-                <div class="col-4 counters" id="roundCounter">Round: <span id="round"> 0</span></div>
-                <div class="col-4 counters">High Score: <span id="hScore"> 0</span> </div>
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-6">
+            <div class="game-button-container">
+              <button id="start" class="btn btn-success control-buttons">
+                Start
+              </button>
             </div>
-        </div>
-        <div class="container">
-            <div class="row no-gutters" id="press">
-                <div class="col-12">
-                    <div class="game-button-container">
-                        <button class="gameButtons" id="btn-green" ></button>
-                        <button class="gameButtons" id="btn-blue"></button>
-                    </div>
-                    <div class="col-12">
-                        <div>
-                            <p id="instructions"></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="game-button-container">
-                        <button class="gameButtons" id="btn-purple"></button>
-                        <button class="gameButtons" id="btn-red"></button>
-                    </div>
-                </div>
+          </div>
+          <div class="col-6">
+            <div class="game-button-container">
+              <button id="reset" class="btn btn-danger control-buttons">
+                Reset
+              </button>
             </div>
+          </div>
         </div>
-
-        <div class="container">
-            <div class="row no-gutters">
-                <div class="col-6">
-                    <div class="game-button-container">
-                        <button id="start" class=" btn btn-success control-buttons">Start</button>
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="game-button-container">
-                        <button id="reset" class=" btn btn-danger control-buttons">Reset</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
     <footer id="footer">
-        <p>
-            For Education Purposes Only.
-        </p>
+      <p>For Education Purposes Only.</p>
     </footer>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="assets/js/script.js"></script>
-</body>
-
+  </body>
 </html>
