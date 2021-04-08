@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="Description" content="Enter your description here" />
+    <meta name="Memorious, memory game" content="A Simon style memory game.  Copy the light sequence, which gets longer each round" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css"
@@ -14,7 +14,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Title</title>
+    <title>Memorious</title>
   </head>
 
   <body>
@@ -46,7 +46,7 @@
             <div class="col-12">
               <div>
                 <p id="instructions"></p>
-              </div>
+              </div> 
             </div>
           </div>
           <div class="col-12">
@@ -60,14 +60,76 @@
 
       <div class="container">
         <div class="row no-gutters">
-          <div class="col-6">
+          <div class="col-4">
             <div class="game-button-container">
               <button id="start" class="btn btn-success control-buttons">
                 Start
               </button>
             </div>
           </div>
-          <div class="col-6">
+
+          <div class="col-4">
+            <div class="game-button-container">
+              <!-- CREDIT BOOTSTRAP MODAL-->
+              <!-- Button trigger modal -->
+              <button
+                type="button"
+                class="btn btn-warning control-buttons"
+                data-toggle="modal"
+                data-target="#staticBackdrop"
+              >
+                Rules
+              </button>
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="staticBackdrop"
+                data-backdrop="static"
+                data-keyboard="false"
+                tabindex="-1"
+                aria-labelledby="staticBackdropLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="staticBackdropLabel">
+                        Rules & Aim Of The Game
+                      </h5>
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>
+                        The game is based on the popular iconic Simon game. Copy
+                        the sequence of the lights to progress through the
+                        rounds, then try to beat your high score. Easy!....or is
+                        it?
+                      </p>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-warning"
+                        data-dismiss="modal"
+                      >
+                        Understood
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--/End of Modal -->
+            </div>
+          </div>
+
+          <div class="col-4">
             <div class="game-button-container">
               <button id="reset" class="btn btn-danger control-buttons">
                 Reset

@@ -43,6 +43,7 @@ h1 {
 .game-button-container {
   display: flex;
   justify-content: center;
+  margin-bottom: 5px;
 }
 
 .gameButtons {
