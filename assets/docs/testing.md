@@ -1,6 +1,6 @@
 # TESTING
 
-Throughout the creation of the game I used Chrome DevTools console.log and alert() to test the Javascript Code. This was especially useful when creating the more larger functions in the JavaScript file.
+Throughout the creation of the game I used Chrome DevTools, console.log and alert() to test the Javascript Code. This was especially useful when creating the more larger functions in the JavaScript file.
 
 ## Testing HTML AND CSS Code In Validators
 
