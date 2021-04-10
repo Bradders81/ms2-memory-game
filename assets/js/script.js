@@ -1,34 +1,37 @@
 document.addEventListener("DOMContentLoaded", () => {
-
+  
 	turnOff();
 	getReady();
-
+  
 	let startBtn = document.getElementById("start");
 	let reset = document.getElementById("reset");
 	let userPattern = []; // Array to store the of selections by the gamesTurn function
 	let gamePattern = []; // Array to sore the selections by the usersTurn function
 	let buttonArray = []; // Array to hold games buttons for the game to choose from randomly
+  
 
 	// Gets the id of all the game buttons and pushes them into the buttonArray
+  
 	let gameBtn = document.getElementsByClassName("gameButtons");
 	for (buttons of gameBtn) {
 		let gameBtnID = buttons.id;
 		buttonArray.push(gameBtnID);
 	}
 
+
 	// Plays sound when game buttons pressed/selected
 	function sound(pressed) {
 		if (pressed == "btn-green") {
-			beep1 = new Audio("assets/sounds/beep1.mp3");
+			let beep1 = new Audio("assets/sounds/beep1.mp3");
 			beep1.play();
 		} else if (pressed == "btn-blue") {
-			beep2 = new Audio("assets/sounds/beep2.mp3");
+			let beep2 = new Audio("assets/sounds/beep2.mp3");
 			beep2.play();
 		} else if (pressed == "btn-purple") {
-			beep3 = new Audio("assets/sounds/beep3.mp3");
+			let beep3 = new Audio("assets/sounds/beep3.mp3");
 			beep3.play();
 		} else if (pressed == "btn-red"); {
-			beep4 = new Audio("assets/sounds/beep4.mp3");
+			let beep4 = new Audio("assets/sounds/beep4.mp3");
 			beep4.play();
 		}
 	}
@@ -61,8 +64,8 @@ document.addEventListener("DOMContentLoaded", () => {
 		$(".gameButtons").attr("disabled", true);
 		for (let i = 0; i < gamePattern.length; i++) {
 			setTimeout(function () {
-				btnSound = gamePattern[i];
-				BtnShow = document.getElementById(btnSound);
+			let	btnSound = gamePattern[i];
+			let	BtnShow = document.getElementById(btnSound);
 				sound(btnSound);
 				BtnShow.style.backgroundColor = "rgb(250, 250, 250)"; // Shade of white
 				BtnShow.style.boxShadow = "none";
@@ -101,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			this.style.boxShadow = "none";
 			setTimeout(function () {
 				if (clickedBtnID === "btn-green") {
-					changeBack = document.getElementById("btn-green");
+				let	changeBack = document.getElementById("btn-green");
 					changeBack.style.backgroundColor = "rgb(19, 226, 36)"; // green
 					changeBack.style.boxShadow = "#000 6px 4px 4px";
 				} else if (clickedBtnID === "btn-blue") {
@@ -190,7 +193,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			let gameOver = document.getElementById("instructions");
 			gameOver.innerText = `GAME OVER! Score: ${score}`;
 			instructions.style.color = "rgb(185, 22, 185)";
-		}, 200)
+		}, 200);
 	}
 
 	/* Influence for this function came from: Code Institute Love Math Project walk-through.
@@ -217,5 +220,4 @@ document.addEventListener("DOMContentLoaded", () => {
 			return;
 		}
 	}
-
 });
