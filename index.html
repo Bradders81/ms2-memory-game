@@ -43,8 +43,8 @@
         <div class="row no-gutters" id="press">
           <div class="col-12">
             <div class="game-button-container">
-              <button class="gameButtons" id="btn-green"></button>
-              <button class="gameButtons" id="btn-blue"></button>
+              <button class="gameButtons" id="btn-green" aria-label="Green-game-button"></button>
+              <button class="gameButtons" id="btn-blue" aria-label="Blue-game-button"></button>
             </div>
             <div class="col-12">
               <div>
@@ -54,8 +54,8 @@
           </div>
           <div class="col-12">
             <div class="game-button-container">
-              <button class="gameButtons" id="btn-purple"></button>
-              <button class="gameButtons" id="btn-red"></button>
+              <button class="gameButtons" id="btn-purple" aria-label="Purple-game-button"></button>
+              <button class="gameButtons" id="btn-red" aria-label="Red-game-button"></button>
             </div>
           </div>
         </div>
@@ -65,7 +65,7 @@
         <div class="row no-gutters">
           <div class="col-4">
             <div class="game-button-container">
-              <button id="start" class="btn btn-success control-buttons">
+              <button id="start" class="btn btn-success control-buttons" aria-label="Start">
                 Start
               </button>
             </div>
@@ -121,6 +121,7 @@
                         type="button"
                         class="btn btn-warning"
                         data-dismiss="modal"
+                        aria-label="Close"
                       >
                         Understood
                       </button>
@@ -134,7 +135,7 @@
 
           <div class="col-4">
             <div class="game-button-container">
-              <button id="reset" class="btn btn-danger control-buttons">
+              <button id="reset" class="btn btn-danger control-buttons" aria-label="Reset">
                 Reset
               </button>
             </div>
@@ -142,9 +143,23 @@
         </div>
       </div>
     </div>
-    <footer id="footer">
-      <p>For Education Purposes Only.</p>
-      
+    <footer id="footer" class="container-fluid">
+      <div class="row">
+        <div class="col-6">
+          <p>For Education Purposes Only.</p>
+        </div>
+        <div class="col-6">
+        <p> Contact us: 
+          <a href="memorious.queries@gmail.com">
+            <i class="fas fa-envelope">
+            </i>
+            <span class="sr-only">
+              Email Icon
+        </span>
+        </a>
+      </p>
+      </div>
+    </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>

@@ -8,6 +8,7 @@
   font-family: "Roboto", sans-serif;
   font-weight: 900;
   letter-spacing: 2px;
+
 }
 
 html,
@@ -17,7 +18,6 @@ body {
 
 body {
   width: 100vw;
-  height: 100vh;
   background: url("../images/bg1.jpg") center center no-repeat;
   display: flex;
   flex-direction: column;
@@ -79,7 +79,9 @@ h1 {
   padding: 10px;
   border: solid 2px #000;
   border-radius: 8px;
-  font-weight: 100;
+  font-weight: 200;
+  color: #000;
+
 }
 
 /*---------- Score Counters ----------*/
@@ -100,24 +102,22 @@ h1 {
 }
 
 #footer {
-  height: 50px;
-  width: auto;
   background-color: rgb(224, 62, 3);
   flex-shrink: 0;
 }
 
 #footer p {
-  font-size: 20px;
-  color: #fff;
+  font-size: 14px;
   margin-top: 5px;
-  margin-left: 25px;
-}
+  margin-left: 20px;
+  text-align: center;
+  }
 
 /*---------- @Media Queries ----------*/
 @media screen and (max-width: 490px) {
   .gameButtons {
-    width: 125px;
-    height: 125px;
+    width: 110px;
+    height: 110px;
   }
 
   #instructions {
