@@ -103,7 +103,7 @@ ____
 * [Google Fonts](https://fonts.google.com/) - For all the fonts used in this site.
 * [FontAwesome](https://fontawesome.com/) - Used to provide the email icon in the footer.
 * [Techsini](http://techsini.com/multi-mockup/index.php) - Used to create the Mockup.
-* [balsamiq](http://https://balsamiq.com/wireframes/desktop)-For wireframes.
+* [balsamiq](https://balsamiq.com/)-For wireframes.
 * [Gitpod](https://www.gitpod.io/) - Within the Integrated Development Environment (IDE) used in this project. Gitpod extensions used: Auto Close Tag; Bootstrap 4CDN Snippet for boilerplate and head; HTML Hint; Prettier; Color Picker; Indent-Rainbow; and Code Spell Checker.
 * [Git](https://git-scm.com/) - version control technology used in ths project.
 * [GitHub](http://github.com/) - Stores repositories and is updated via commits sent to it via Git. Also used to deploy the site to GitHub Pages
@@ -162,7 +162,7 @@ ____
 
 [Beep3](https://freesound.org/people/solernix/sounds/540902/) from Freesound, by ZvinbergsA.
 
-[Beep4](https://freesound.org/people/shukran/sounds/532) from Freesound,  by shukran.
+[Beep4](https://freesound.org/people/shukran/sounds) from Freesound,  by shukran.
 
 ## General Credits
 
