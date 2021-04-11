@@ -4,7 +4,7 @@ Throughout the creation of the game I used Chrome DevTools, console.log and aler
 
 ## Testing HTML AND CSS Code In Validators
 
-1. **HTML** - Tested with [W3C Validation Service](https://validator.w3.org/) - PASSED No errors or warnings. Click [here](html-validator.png) to see the result.
+1. **HTML** - Tested with [W3C Validation Service](https://validator.w3.org/) - PASSED No errors or warnings. Click [here](html-validator.png) to see the result.  I ran the test again after adding link to favicon in the head. PASSED again with no errors or warnings.
 
 1. **CSS** - Tested with [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input) = PASSED No errors or warnings.  Click [here](css-validator.png) to see the result. For this test instead of using the live sites URL I had to copy the code from my style.css file direct into the validator. This is because the Bootstrap CDN was causing errors. I researched this online and it is due to how some of the Bootstrap code in written so that it is still recognised by older browsers. If you want to read further information about this on the Bootstrap website, click [here](https://getbootstrap.com/docs/4.0/getting-started/browsers-devices/#validators).
 
@@ -58,6 +58,7 @@ This test was done on a windows laptop and using Chrome Browser in incognito mod
 
 ![mobile](lighthouse-mobile.png)
 
+The above tests were run again after the favicon was added.  Exactly same results on both desktop and mobile were seen.
 ___
 
 # BUGS

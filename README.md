@@ -102,6 +102,7 @@ ____
 * [Bootstrap](https://getbootstrap.com/) - Used for the modal, start, rules and reset buttons.  Also used for the Bootstrap grid system to help make the site responsive.
 * [Google Fonts](https://fonts.google.com/) - For all the fonts used in this site.
 * [FontAwesome](https://fontawesome.com/) - Used to provide the email icon in the footer.
+* [Favicon Generator](https://favicon.io/favicon-converter/) - used to create favicon ico file from the background image: bg1.jpg
 * [Techsini](http://techsini.com/multi-mockup/index.php) - Used to create the Mockup.
 * [balsamiq](https://balsamiq.com/)-For wireframes.
 * [Gitpod](https://www.gitpod.io/) - Within the Integrated Development Environment (IDE) used in this project. Gitpod extensions used: Auto Close Tag; Bootstrap 4CDN Snippet for boilerplate and head; HTML Hint; Prettier; Color Picker; Indent-Rainbow; and Code Spell Checker.
@@ -126,7 +127,7 @@ The site is created using Gitpod (IDE) and the site documentation is contained w
 
 The files, documents were sent to GitHub from Gitpod, by using the Git software with the following commands
 
-* git add *file(s)* name</em>
+* git add *file(s)* name
 * git commit -m "commit description"
 * git push
 
@@ -168,9 +169,9 @@ ____
 
 **Bootstrap** has been used to create the grid system, the modal, start and reset buttons, these have however, been customised by me using CSS.
 
-**Google Fonts:**  As noted above, the fonts for this project are from Google Fonts.  the import at the top of the CSS file was copied from Google Fonts.
+**Google Fonts:**  As noted above, the fonts for this project are from Google Fonts.  The import at the top of the CSS file was copied from Google Fonts.
 
-**Mail Icon:** The email icon in the footer is from FontAwesome
+**Mail Icon:** The email icon in the footer is from FontAwesome.
 
 The idea of putting all my JavaScript code inside a DOMContentLoaded event listener was taken from a tutorial I watched on making a card pairs memory game on YouTube by YouTuber, Ania Kubow.  The link to the video is [here](https://www.youtube.com/watch?v=tjyDOHzKN0w).  
 
