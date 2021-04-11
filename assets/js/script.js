@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let buttonArray = []; // Array to hold games buttons for the game to choose from randomly
 
   // Gets the id of all the game buttons and pushes them into the buttonArray
-
   let gameBtn = document.getElementsByClassName("gameButtons");
   for (buttons of gameBtn) {
     let gameBtnID = buttons.id;
@@ -196,14 +195,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* Influence for this function came from: Code Institute Love Math Project walk-through.
-  This function updates the round counter as the user progresses through the rounds*/
+	This function updates the round counter as the user progresses through the rounds*/
   function countToRoundCounter() {
     let roundNum = gamePattern.length;
     document.getElementById("round").innerHTML = roundNum;
   }
 
   /* Influence for this function came from: Code Institute Love Math Project walk-through.
-  This function updates the score after each round */
+	This function updates the score after each round */
   function score() {
     let score = gamePattern.length - 1;
     document.getElementById("score").innerText = score * 10;
